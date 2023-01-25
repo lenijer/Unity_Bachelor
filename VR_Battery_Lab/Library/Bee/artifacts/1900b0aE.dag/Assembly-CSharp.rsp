@@ -378,7 +378,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Script/ActivateGrabRay.cs"
+"Assets/Script/ActivateTeleportationRay.cs"
 "Assets/Script/Animate_HandOnInput.cs"
+"Assets/Script/FireBulletOnActivate.cs"
+"Assets/Script/GameMenuManager.cs"
+"Assets/Script/SetTurnType.cs"
+"Assets/Script/XRInterractableTwoAttach.cs"
+"Assets/Script/XROffsetGrabInterractable.cs"
 "Assets/XRPlatformControllerSetup.cs"
 -langversion:9.0
 
