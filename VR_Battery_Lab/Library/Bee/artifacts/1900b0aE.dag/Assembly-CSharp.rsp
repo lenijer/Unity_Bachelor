@@ -384,6 +384,7 @@
 "Assets/Script/FireBulletOnActivate.cs"
 "Assets/Script/GameMenuManager.cs"
 "Assets/Script/SetTurnType.cs"
+"Assets/Script/Spawn_Element.cs"
 "Assets/Script/XRInterractableTwoAttach.cs"
 "Assets/Script/XROffsetGrabInterractable.cs"
 "Assets/XRPlatformControllerSetup.cs"
