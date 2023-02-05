@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 103
+  controlID: 86
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 380
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 104
+  controlID: 92
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 105
+  controlID: 93
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,22 +318,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Material
+    - Assets/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 42
   m_LastFolders:
-  - Assets/Material
+  - Assets/Script
   m_LastFoldersGridSize: 42
   m_LastProjectPath: C:\Users\Lenita\Desktop\Unity_Bachelor\VR_Battery_Lab
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a6660000
-    m_LastClickedID: 26278
-    m_ExpandedIDs: 000000006a66000000ca9a3b
+    scrollPos: {x: 0, y: 159}
+    m_SelectedIDs: 30690000
+    m_LastClickedID: 26928
+    m_ExpandedIDs: 000000001469000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a660000
+    m_ExpandedIDs: 0000000014690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0048fcff
+      m_SelectedIDs: c2340100
       m_LastClickedID: 0
-      m_ExpandedIDs: 6614feff1016feffd017feff7e19feffde1bfeffb81dfeffd825feffc627feffd62afeff222dfeff5058feff8a59feff848cfefffc91feff3e93feff3c97feff2aa6feff1adefeff7adffeffbce1feff5ee3feffb0e4feff62e6feffbee8feff54eafeffbceffeff32f1fefff6f2feff74f4feff72f6fefff0f7feff80fbfeffa2fcfeffecfdfeff4e04ffff5c06ffff2008fffff609ffff740bffff020dffffdc0fffffb211ffff2814ffff7816ffffa218ffff4e1affff141dffff3c1fffff1022ffffb823ffff2a26ffff1028ffffae2affff562cffff022effffca2fffffc231ffff6233fffffc35ffffb437ffff2c3affffd03bffff9a3dffff5a3fffffda43ffff0e46ffffce48ffffbc4afffffe4dffffd24fffff9e52ffff5254ffffd856ffff7059ffff9e5affff387dffff5480ffff648cffffa68dffff10a8ffff8eb3ffff08bfffffcec8ffffded4ffff28deffff1ee4ffff4ae6ffff12ebffff10edffffe0f1ffff50f2ffff8af2ffffe0f3ffff54f4ffff32fbffff8c670000ac680000c0690000ca690000ea6a0000246b0000846b0000906b0000526c0000686c0000b06c0000886d0000347000000071000020720000ae720000ea7300000074000020750000ae750000d0750000d47500009a760000ba770000487800007a7a0000087b0000dc7b0000fc7c00008a7d0000828000009c80000046810000f883000034840000228c0000628c0000189f00004aa4000092a4000018a7000032a800003ca800005ca9000096a90000eaa9000034aa00000eab00002eac0000bcac000008ad0000e4ad000004af000092af0000e0af000054b0000074b1000002b2000050b20000c4b20000e4b30000c0b4000074b900008eb9000084ba00008abc00009abd0000a0bf0000b0c000003ec300004ec4000054c6000066c70000e4c80000f6c90000f4cc000010cd000032cd000088d30000b8d3000094d60000aed60000c8f1000002f2000032f2000054f20000a8fa0000ecfb00007cfc00000cfd00003efe000082ff000012000100260001003e000100a4000100800301008a030100ce040100080501005e05010072050100f00501002407010068080100a2080100f80801000c0901008e090100bc0a0100c60a01000a0c0100440c0100300d0100
+      m_ExpandedIDs: ee3bfffff63dffff928fffff6091ffff54a1ffff4aa7ffff8cd6ffff4ee2ffff42e6ffff12faffff7a650000d66600002c670000187d00003a7d0000a87e00006a7f000024800000e480000038810000ee050100100601005a070100dc07010018090100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -776,9 +776,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.38775, y: 1.8486906, z: -0.103323944}
+    m_Target: {x: -9.413058, y: -4.489974, z: -0.5452975}
     speed: 2
-    m_Value: {x: 2.38775, y: 1.8486906, z: -0.103323944}
+    m_Value: {x: -9.413058, y: -4.489974, z: -0.5452975}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -820,25 +820,25 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0666847, y: 0.6949911, z: -0.065054424, w: -0.7127505}
+    m_Target: {x: -0.17034052, y: 0.6895275, z: -0.17234002, w: -0.68218315}
     speed: 2
-    m_Value: {x: -0.06669454, y: 0.6950937, z: -0.06506403, w: -0.7128557}
+    m_Value: {x: -0.17037979, y: 0.6896865, z: -0.17237975, w: -0.68234044}
   m_Size:
-    m_Target: 0.09440928
+    m_Target: 7.094493
     speed: 2
-    m_Value: 0.09440928
+    m_Value: 7.094493
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 0.82059
+    m_SpeedNormalized: 0.41
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -849,7 +849,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: -0.1931593, y: 0.6825347, z: -0.19462696, w: -0.67723805}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -971,9 +971,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 634
-    width: 1720
-    height: 365
+    y: 830
+    width: 1539
+    height: 169
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

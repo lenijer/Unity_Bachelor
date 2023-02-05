@@ -8,6 +8,7 @@ public class Spawn_Element : MonoBehaviour
     public Transform SpawnLoc;
     //public GameObject Element;
     public GameObject spawnElementDefault;
+    public GameObject spawnElectronDefault;
 
     public void SpawnElemant()
     {

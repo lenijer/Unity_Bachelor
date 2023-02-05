@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 578906451747729985}
   - component: {fileID: 5610011284681645674}
   - component: {fileID: 3795867415276092466}
+  - component: {fileID: 5075133679299049277}
   m_Layer: 0
   m_Name: Default_UI_Element
   m_TagString: Untagged
@@ -146,3 +147,19 @@ MonoBehaviour:
   SpawnLoc: {fileID: 0}
   spawnElementDefault: {fileID: 1721761486265943851, guid: f22854bd80e12304abb7710c1497f4a1,
     type: 3}
+  spawnElectronDefault: {fileID: 8327511350780074621, guid: d126abf4f9e7e1d4581bd83537fbaa4d,
+    type: 3}
+--- !u!114 &5075133679299049277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827902993753658862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d6af84ec1c08442a68f29b446785a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  value: 0
