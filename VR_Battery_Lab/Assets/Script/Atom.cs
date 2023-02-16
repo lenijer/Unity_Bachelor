@@ -5,4 +5,6 @@ using UnityEngine;
 public class Atom : MonoBehaviour
 {
     public int value;
+
+    public string identifier;
 }

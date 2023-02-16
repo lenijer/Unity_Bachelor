@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Left_Hand
   - Right_Hand
+  - Atom
+  - Molecule
   layers:
   - Default
   - TransparentFX
