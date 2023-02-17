@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5305970201200393113}
   - component: {fileID: 1799187444542471516}
   - component: {fileID: 2504761273788781260}
-  m_Layer: 0
+  - component: {fileID: 7408766613693847577}
+  m_Layer: 8
   m_Name: Default_Element
   m_TagString: Atom
   m_Icon: {fileID: 0}
@@ -231,3 +232,18 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7408766613693847577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721761486265943851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15df7a6fbecb1cc4b8080577eeefbd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atomic: {fileID: 0}
+  parent_pref: {fileID: 741216380348586551, guid: 1fff22556beff374e82d8c61ab6ecce9,
+    type: 3}
