@@ -23,7 +23,8 @@ public class Spawn_Element : MonoBehaviour
         spawnNew.name = this.name;
 
         spawnNew.transform.position = SpawnLoc.position;
-        spawnNew.transform.position += Vector3.up * 1;
+        Vector3 offset = new Vector3(0, 0.3f, 0);
+        spawnNew.transform.position += offset;
 
         //spawnElementDefault.material = new Material(img.Texture);
         Material mat = new Material(Shader.Find("Standard"));
