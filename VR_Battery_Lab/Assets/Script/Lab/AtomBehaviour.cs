@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class AtomBehaviour : MonoBehaviour
 {
     public Atom atomic;
+    public GameObject labelPrefab;
+    public Vector3 Offset = new Vector3(0f, 0f, 0f);
     public GameObject parent_pref;
 
     private GameObject parent;
@@ -14,7 +16,7 @@ public class AtomBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ShowLabel(); 
     }
 
     // Update is called once per frame
@@ -101,5 +103,13 @@ public class AtomBehaviour : MonoBehaviour
     public GameObject getParent()
     {
         return parent;
+    }
+
+    void ShowLabel()
+    {
+        var lab = Instantiate(labelPrefab, transform.position, Quaternion.identity, transform);
+        lab.transform.GetChild(1).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.identifier;
+        lab.transform.GetChild(2).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.value.ToString();
+        lab.gameObject.transform.SetParent(this.gameObject.transform);
     }
 }

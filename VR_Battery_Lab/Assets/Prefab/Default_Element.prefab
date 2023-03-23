@@ -245,5 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atomic: {fileID: 0}
+  labelPrefab: {fileID: 3989369418090916519, guid: 98e07255ec6802742a67803e1f7a434f,
+    type: 3}
+  Offset: {x: 0.2, y: 0, z: 0}
   parent_pref: {fileID: 741216380348586551, guid: 1fff22556beff374e82d8c61ab6ecce9,
     type: 3}
