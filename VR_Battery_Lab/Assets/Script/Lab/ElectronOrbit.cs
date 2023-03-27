@@ -5,13 +5,13 @@ using UnityEngine;
 public class ElectronOrbit : MonoBehaviour
 {
     [SerializeField] private float degreesPerSecond = 45;
-    [SerializeField] private float orbitDistance = 0.2f;
+    public float orbitDistance = 0.2f;
     private Vector3 realativeDistance = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = transform.parent.position + transform.forward * 0.5f;
+        transform.position = transform.parent.position + transform.forward * orbitDistance;
         realativeDistance = transform.position - transform.parent.position;
     }
 
