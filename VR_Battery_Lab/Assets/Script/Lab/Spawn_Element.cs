@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Spawn_Element : MonoBehaviour
 {
-    public Transform SpawnLoc;
+    public GameObject SpawnLoc;
     //public GameObject Element;
     public GameObject spawnElementDefault;
     public GameObject spawnElectronDefault;
@@ -16,24 +16,26 @@ public class Spawn_Element : MonoBehaviour
         spawnedObject.transform.position = SpawnLoc.position;
         spawnedObject.transform.position += Vector3.up * 1;*/
 
-        GameObject spawnNew = spawnElementDefault;
+        //GameObject spawnNew = new GameObject();
+        //spawnNew = spawnElementDefault;
+
+        GameObject spawnedObject = Instantiate(spawnElementDefault);
 
         RawImage img = this.GetComponent<RawImage>();
 
-        spawnNew.name = this.name;
+        spawnedObject.name = this.name;
 
-        spawnNew.transform.position = SpawnLoc.position;
-        Vector3 offset = new Vector3(0, 0.3f, 0);
-        spawnNew.transform.position += offset;
 
         //spawnElementDefault.material = new Material(img.Texture);
         Material mat = new Material(Shader.Find("Standard"));
         mat.mainTexture =  img.texture;
-        spawnNew.GetComponent<MeshRenderer>().material = mat;
+        spawnedObject.GetComponent<MeshRenderer>().material = mat;
 
         Atom atm = this.GetComponent<Atom>();
-        spawnNew.GetComponent<AtomBehaviour>().atomic = atm;
+        spawnedObject.GetComponent<AtomBehaviour>().atomic = atm;
 
-        GameObject spawnedObject = Instantiate(spawnNew);
+        spawnedObject.transform.position = SpawnLoc.transform.position;
+        Vector3 offset = new Vector3(0.3f * Mathf.Sin(SpawnLoc.transform.rotation.y), 0, 0.3f * Mathf.Cos(SpawnLoc.transform.rotation.y));
+        spawnedObject.transform.position += offset * (-1);
     }
 }

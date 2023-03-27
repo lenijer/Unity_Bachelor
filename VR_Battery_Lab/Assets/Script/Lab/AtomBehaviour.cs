@@ -119,11 +119,11 @@ public class AtomBehaviour : MonoBehaviour
 
     void GenerateElectrons()
     {
-        int count = 4;
+        int count = 8;
         float angleStep = 360.0f / count;
         for (int i = 0; i < count; i++) 
         {
-            GameObject el = Instantiate(electronPrefab);
+            GameObject el = Instantiate(electronPrefab, transform.position, Quaternion.identity, transform);
             el.gameObject.transform.SetParent(this.gameObject.transform);
             el.transform.RotateAround(this.transform.position, Vector3.up, angleStep * i);
             
