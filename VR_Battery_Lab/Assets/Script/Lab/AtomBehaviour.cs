@@ -7,6 +7,7 @@ public class AtomBehaviour : MonoBehaviour
 {
     public Atom atomic;
     public GameObject labelPrefab;
+    public GameObject electronPrefab;
     public Vector3 Offset = new Vector3(0f, 0f, 0f);
     public GameObject parent_pref;
 
@@ -17,6 +18,7 @@ public class AtomBehaviour : MonoBehaviour
     void Start()
     {
         ShowLabel(); 
+        GenerateElectrons();
     }
 
     // Update is called once per frame
@@ -110,6 +112,25 @@ public class AtomBehaviour : MonoBehaviour
         var lab = Instantiate(labelPrefab, transform.position, Quaternion.identity, transform);
         lab.transform.GetChild(1).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.identifier;
         lab.transform.GetChild(2).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.value.ToString();
+        lab.transform.GetChild(3).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.atom_name;
+        lab.transform.GetChild(4).GetComponent<TMPro.TextMeshProUGUI>().text = atomic.mass.ToString();
         lab.gameObject.transform.SetParent(this.gameObject.transform);
+    }
+
+    void GenerateElectrons()
+    {
+        int count = 4;
+        float angleStep = 360.0f / count;
+        for (int i = 0; i < count; i++) 
+        {
+            GameObject el = Instantiate(electronPrefab);
+            el.gameObject.transform.SetParent(this.gameObject.transform);
+            el.transform.RotateAround(this.transform.position, Vector3.up, angleStep * i);
+            
+        }
+        //for (int i = 0; i < atomic.value; i++) 
+        //{
+            
+        //}
     }
 }
