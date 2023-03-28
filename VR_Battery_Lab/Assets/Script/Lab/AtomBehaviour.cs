@@ -73,20 +73,21 @@ public class AtomBehaviour : MonoBehaviour
 
                 GameObject parent_obj = Instantiate(parent_pref);
                 parent_obj.name = atomic.identifier + col.GetComponent<AtomBehaviour>().atomic.identifier;
+                parent_obj.transform.position = changes + new Vector3(0,-0.1f,0);
                 //Debug.Log("j");
 
-                this.gameObject.transform.position = Vector3.one * (0.1f);
+                //this.gameObject.transform.position = Vector3.one * (0.1f);
                 parent_obj.GetComponent<Molecule>().AddChild(this.gameObject);
                 this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
                 //Debug.Log(this.name);
                 //Debug.Log("a");
-                col.transform.position = Vector3.one * (-0.1f);
+                //col.transform.position = Vector3.one * (-0.1f);
                 parent_obj.GetComponent<Molecule>().AddChild(col);
                 col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
                 //Debug.Log(col.name);
                 //Debug.Log("b");
 
-                parent_obj.transform.position = changes;
+                //parent_obj.transform.position = changes;
                 //Debug.Log("c");
             }
         }
