@@ -8,8 +8,11 @@ public class AtomBehaviour : MonoBehaviour
     public Atom atomic;
     public GameObject labelPrefab;
     public GameObject electronPrefab;
-    public Vector3 Offset = new Vector3(0f, 0f, 0f);
     public float orbitDistance = 0.1f;
+    private Vector3 rotationVector = Vector3.up;
+
+    public ParticleSystem ps;
+
     public GameObject parent_pref;
 
     private GameObject parent;
@@ -96,6 +99,7 @@ public class AtomBehaviour : MonoBehaviour
 
     public void setParent(GameObject p)
     {
+        ps.Play();
         parent = p;
         hasparent = true;
         //this.gameObject.transform.SetParent(p.transform);
@@ -177,7 +181,8 @@ public class AtomBehaviour : MonoBehaviour
         {   addElectron(count); 
             return; }
 
-        orbitDistance = tempdistance * 2;
+        rotationVector = Vector3.right;
+        orbitDistance = tempdistance * 1.2f;
         if (count > 8)
         {   addElectron(8);
             count -= 8;}
@@ -185,7 +190,8 @@ public class AtomBehaviour : MonoBehaviour
         {   addElectron(count);
             return; }
 
-        orbitDistance = tempdistance * 3;
+        rotationVector = new Vector3(1f,1f,0f);
+        orbitDistance = tempdistance * 1.4f;
         if (count > 18)
         {   addElectron(18);
             count -= 18;}
@@ -193,7 +199,8 @@ public class AtomBehaviour : MonoBehaviour
         {   addElectron(count);
             return; }
 
-        orbitDistance = tempdistance * 4;
+        rotationVector = new Vector3(1f, -1f, 0f);
+        orbitDistance = tempdistance * 1.6f;
         if (count > 32)
         {   addElectron(32);
             count -= 32;}
@@ -201,7 +208,8 @@ public class AtomBehaviour : MonoBehaviour
         {   addElectron(count);
             return; }
 
-        orbitDistance = tempdistance * 5;
+        rotationVector = Vector3.left;
+        orbitDistance = tempdistance * 1.8f;
         if (count > 50)
         {   addElectron(50);
             count -= 50;}
@@ -209,7 +217,8 @@ public class AtomBehaviour : MonoBehaviour
         {   addElectron(count);
             return; }
 
-        orbitDistance = tempdistance * 6;
+        rotationVector = Vector3.down;
+        orbitDistance = tempdistance * 2f;
         addElectron(count);
 
     }
@@ -222,7 +231,8 @@ public class AtomBehaviour : MonoBehaviour
             GameObject el = Instantiate(electronPrefab, transform.position, Quaternion.identity, transform);
             el.GetComponent<ElectronOrbit>().orbitDistance = orbitDistance;
             el.gameObject.transform.SetParent(this.gameObject.transform);
-            el.transform.RotateAround(this.transform.position, Vector3.up, angleStep * i);
+            el.transform.RotateAround(this.transform.position, rotationVector, angleStep * i);
+            el.GetComponent<ElectronOrbit>().orbitRotation = rotationVector;
         }
     }
 }
