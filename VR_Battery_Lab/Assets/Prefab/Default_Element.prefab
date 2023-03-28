@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1721761486265943851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
+  m_LocalScale: {x: 0.09594884, y: 0.09594884, z: 0.09594884}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -250,5 +250,6 @@ MonoBehaviour:
   electronPrefab: {fileID: 8327511350780074621, guid: d126abf4f9e7e1d4581bd83537fbaa4d,
     type: 3}
   Offset: {x: 0.2, y: 0, z: 0}
+  orbitDistance: 0.1
   parent_pref: {fileID: 741216380348586551, guid: 1fff22556beff374e82d8c61ab6ecce9,
     type: 3}
