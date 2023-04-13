@@ -10,11 +10,11 @@ public class DestroyObject : MonoBehaviour
         //Debug.Log("c");
         GameObject collider;
         collider = collision.gameObject;
-        if (collider.tag == "Atom")
+        if (collider.tag == "Molecule")
         {
             Destroy(collider);
             //Debug.Log("a");
-        } else if (collider.tag == "Molecule")
+        } else if (collider.tag == "Atom")
         {
             Destroy(collider);
             //Debug.Log("p");
