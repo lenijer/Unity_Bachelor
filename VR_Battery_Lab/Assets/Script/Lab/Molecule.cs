@@ -25,6 +25,7 @@ public class Molecule : MonoBehaviour
     {
         AtomChildren.Add(atom);
         atoms.Add(atom.GetComponent<AtomBehaviour>().atomic.value);
+        molecule_name += atom.GetComponent<AtomBehaviour>().atomic.identifier;
         atom.GetComponent<AtomBehaviour>().setParent(this.gameObject);
         atom.gameObject.transform.SetParent(this.gameObject.transform);
     }
