@@ -34,8 +34,8 @@ public class Spawn_Element : MonoBehaviour
         Atom atm = this.GetComponent<Atom>();
         spawnedObject.GetComponent<AtomBehaviour>().atomic = atm;
 
-        spawnedObject.transform.position = SpawnLoc.transform.position;
-        Vector3 offset = new Vector3(0.3f * Mathf.Sin(SpawnLoc.transform.rotation.y), 0, 0.3f * Mathf.Cos(SpawnLoc.transform.rotation.y));
+        spawnedObject.transform.position = this.transform.position;
+        Vector3 offset = new Vector3(0.3f * Mathf.Sin(this.transform.rotation.y), 0, 0.3f * Mathf.Cos(this.transform.rotation.y));
         spawnedObject.transform.position += offset * (-1);
     }
 }
