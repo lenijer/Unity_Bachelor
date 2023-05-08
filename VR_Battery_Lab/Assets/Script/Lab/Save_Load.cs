@@ -8,6 +8,8 @@ public class Save_Load : MonoBehaviour
 {
     public GameObject o;
     public GameObject a;
+    public GameObject spawn;
+    public GameObject DataHandler;
 
     public GameObject ButtonPrefab;
 
@@ -56,6 +58,8 @@ public class Save_Load : MonoBehaviour
                 spawnedbutton.transform.localScale = ButtonPrefab.transform.localScale;
                 spawnedbutton.transform.localRotation = ButtonPrefab.transform.localRotation;
                 spawnedbutton.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+                spawnedbutton.GetComponent<MoleculeSpawn>().spawner = spawn;
+                spawnedbutton.GetComponent<MoleculeSpawn>().AtomData = DataHandler.GetComponent<AtomData>().atoms;
                 spawnedbutton.name = SaveNames[i] + "_btn";
                 GameObject.Find(SaveNames[i] + "_btn").GetComponentInChildren<TMP_Text>().text = SaveNames[i];
             }

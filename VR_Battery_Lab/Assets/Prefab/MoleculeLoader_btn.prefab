@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 3050883980796115913}
   - component: {fileID: 3002658154369599261}
   m_Layer: 0
-  m_Name: MoleculeLoader
+  m_Name: MoleculeLoader_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,4 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoleculePrefab: {fileID: 741216380348586551, guid: 1fff22556beff374e82d8c61ab6ecce9,
+    type: 3}
+  spawner: {fileID: 0}
+  AtomData: []
+  AtomPrefab: {fileID: 1721761486265943851, guid: f22854bd80e12304abb7710c1497f4a1,
     type: 3}
