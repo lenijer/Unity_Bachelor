@@ -19,6 +19,10 @@ public class DestroyObject : MonoBehaviour
             Destroy(collider);
             //Debug.Log("p");
         }
+        else if (collider.tag == "Item")
+        {
+            Destroy(collider);
+        }
     }
 
     // Start is called before the first frame update

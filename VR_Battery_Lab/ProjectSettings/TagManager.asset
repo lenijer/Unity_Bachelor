@@ -8,6 +8,7 @@ TagManager:
   - Right_Hand
   - Atom
   - Molecule
+  - Item
   layers:
   - Default
   - TransparentFX

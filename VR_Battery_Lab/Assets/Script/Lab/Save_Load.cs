@@ -44,6 +44,14 @@ public class Save_Load : MonoBehaviour
         SaveLoad.SaveNames(SaveNames);
     }
 
+    public void reloadmenu()
+    {
+        if (a.activeSelf)
+        {
+            showloadmenu();
+        }
+    }
+
     public void showloadmenu()
     {
         a.SetActive(true);
