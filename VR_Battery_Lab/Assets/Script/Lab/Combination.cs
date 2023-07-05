@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Combination : MonoBehaviour
 {
-    public List<int> atom_number;
-    public string Name;
-    public string Chemical_name;
-    public bool Discovered = false;
+    public List<int> atom_number;       //is a list holding the atom/elements number in the periodic table
+    public string Name;                 //is the commonly used name for the product
+    public string Chemical_name;        //is the chemical name or the name consisting of the combined atoms ex. NaCl for salt
+    public bool Discovered = false;     //just holds the information on weather or not the specific item has been discovered
 
     public void Discover()
     {

@@ -1,3 +1,7 @@
+/*
+ * Not Relevant to finished product 
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

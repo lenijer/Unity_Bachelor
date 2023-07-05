@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class SpawnerInfo : MonoBehaviour
 {
-    public bool IsOccupied = false;
-    public Transform Player;
-    public Transform Menu;
+    public bool IsOccupied = false;         //Holds a variable to check if there is an object inside it's hitbox
+    public Transform Player;                //Holds the information on where the player is (might not be nessesary)
+    public Transform Menu;                  //Holds the informationon where the meny is (might also not be nessesary)
 
     void OnTriggerExit(Collider collision)
     {
         GameObject collider;
-        collider = collision.gameObject;
+        collider = collision.gameObject;    //Changes the collision detection to get the object it collides with
         if (collider.layer == 8)
         {
-            IsOccupied = false;
+            IsOccupied = false;             //Stops it beeing occupied as the corresponding object leaves the collider
         }
-        //Debug.Log(collision.name + " has left the building");
     }
 
     void Update()
     {
-        /*Vector3 Middle = new Vector3(0f, 0f, 0f);
-        Middle.x = Player.position.x - Menu.position.x;
-        Middle.z = Player.position.z - Menu.position.z;
-        Middle = Middle / 2;
-        //Middle.y = Player.position.y;
-        Middle += Player.position;
-        //Middle.x += Player.position.x;
-        //Middle.z += Player.position.z;
-        this.transform.position = Middle;*/
+
     }
 }

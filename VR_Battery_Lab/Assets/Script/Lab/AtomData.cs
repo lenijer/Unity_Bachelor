@@ -1,3 +1,5 @@
+//holds a list of all the atoms
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

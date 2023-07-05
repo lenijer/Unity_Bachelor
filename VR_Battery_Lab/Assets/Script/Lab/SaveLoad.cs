@@ -1,3 +1,7 @@
+/*
+ * This script uses Unitys built in save and load funktionallity
+ * Unity automatically encrypts these files, so they will not be readeable
+ */
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -6,6 +10,7 @@ using UnityEngine;
 
 public class SaveLoad
 {
+    //saves the file as a .molecule
     public static void SaveData(Molecule molecule)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -21,6 +26,7 @@ public class SaveLoad
         Debug.Log("in " + path);
     }
 
+    //loads the data from the .molecule files
     public static MoleculeData LoadData(string item_name)
     {
         string path = Application.persistentDataPath + "/" + item_name + ".molecule";
@@ -43,6 +49,7 @@ public class SaveLoad
         }
     }
 
+    //saves the list of molecule names
     public static void SaveNames(List<string> SaveNames)
     {
         string[] Names = SaveNames.ToArray();
@@ -56,6 +63,7 @@ public class SaveLoad
         stream.Close();
     }
 
+    //loads the list of molecule names
     public static string[] LoadNames()
     {
         string path = Application.persistentDataPath + "/molecule.name";
@@ -66,12 +74,6 @@ public class SaveLoad
             FileStream stream = new FileStream(path, FileMode.Open);
 
             string[] data = formatter.Deserialize(stream) as string[];
-            /*string info = "";
-            for (int i = 0; i < data.Length; i++)
-            {
-                info += data[i] + ", ";
-            }
-            Debug.Log(info);*/
 
             stream.Close();
 

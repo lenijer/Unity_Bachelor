@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//makes the data saved as simplefied as possible
 [System.Serializable]
 public class MoleculeData
 {

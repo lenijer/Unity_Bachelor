@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class MoleculeSpawn : MonoBehaviour
 {
-    public GameObject MoleculePrefab;
-    public GameObject spawner;
-    public List<Atom> AtomData;
-    public GameObject AtomPrefab;
+    public GameObject MoleculePrefab;   //holds refrence to the molecule prefab
+    public GameObject spawner;          //holds a refrence to the spawner prefab
+    public List<Atom> AtomData;         //refrence to the list of all the atoms
+    public GameObject AtomPrefab;       //refrence to the atoms prefab
 
-    private GameObject Saver;
+    private GameObject Saver;           //refrence to the saving gamer object
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +27,14 @@ public class MoleculeSpawn : MonoBehaviour
     public void spawnMolecule()
     {
         string name = this.name;
-        name = name.Replace("_btn", "");
-        Molecule mol = Saver.GetComponent<Save_Load>().load(name);
+        name = name.Replace("_btn", "");                                    //replaces the button section of the name with blank
+        Molecule mol = Saver.GetComponent<Save_Load>().load(name);          //loads a molecule from the save funktion by using the name
         GameObject spawned = Instantiate(MoleculePrefab);
         spawned.GetComponent<Molecule>().molecule_name = mol.molecule_name;
         spawned.GetComponent<Molecule>().atoms = mol.atoms;
 
         float offset = 1f;
+        //for loop that instanciates the atom similar to the atoms spawning funktion
         for (int i = 0; i < mol.atoms.Count; i++)
         {
             for (int j = 0; j < AtomData.Count; j++)
@@ -50,7 +51,6 @@ public class MoleculeSpawn : MonoBehaviour
                     mat.mainTexture = img.texture;
                     atm.GetComponent<MeshRenderer>().material = mat;
 
-                    //spawned.GetComponent<Molecule>().AddChild(atm);
                     spawned.GetComponent<Molecule>().AtomChildren.Add(atm);
                     atm.GetComponent<AtomBehaviour>().setParent(spawned);
                     atm.gameObject.transform.SetParent(spawned.transform);
@@ -61,6 +61,7 @@ public class MoleculeSpawn : MonoBehaviour
             }
         }
 
+        //places the object in the spawn and tells it the object is there
         spawned.transform.position = spawner.transform.position;
         spawner.GetComponent<SpawnerInfo>().IsOccupied = true;
     }

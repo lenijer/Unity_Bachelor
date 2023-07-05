@@ -5,15 +5,16 @@ using TMPro;
 
 public class Progress : MonoBehaviour
 {
-    public CombinationData PossibleCombos;
-    public GameObject MenuPrefab;
-    public GameObject Menu;
+    public CombinationData PossibleCombos;  //refrence to the combination data
+    public GameObject MenuPrefab;           //refrence to a prefab menu item
+    public GameObject Menu;                 //direct refrence to a menu
 
 
     private List<GameObject> ObjectsToBeEnabaled;
 
     void Start()
     {
+        //sets up a showing for the purpose of guiding players to what they should combine
         for (int i = 0; i < PossibleCombos.Objects.Count; i++)
         {
             GameObject spawn = Instantiate(MenuPrefab);
@@ -35,30 +36,17 @@ public class Progress : MonoBehaviour
                 }
             }
             spawn.transform.GetChild(0).GetComponent<TMP_Text>().text = Combos;
-            //spawn.transform.GetChild(1).GetComponent<TMP_Text>().text = PossibleCombos.Objects[i].GetComponent<Combination>().Name;
             spawn.transform.GetChild(1).name = PossibleCombos.Objects[i].GetComponent<Combination>().Name + "_lbl";
         }
     }
 
+    //adds the result to the menu when an item has been discovered
     public void DiscoveredAnItem(GameObject discovered)
     {
         if (discovered.GetComponent<Combination>().Discovered)
         {
             GameObject ItemToChange = GameObject.Find(discovered.GetComponent<Combination>().Name + "_lbl");
-            //if (!ItemToChange.activeSelf)
-            //{
             ItemToChange.GetComponent<TMP_Text>().text = discovered.GetComponent<Combination>().Name;
-            //5}
-            /*for (int i = 0; i < ObjectsToBeEnabaled.Count; i++)
-            {
-                if (discovered.GetComponent<Combination>().Name == ObjectsToBeEnabaled[i].name)
-                {
-                    if (!ObjectsToBeEnabaled[i].activeSelf)
-                    {
-                        ObjectsToBeEnabaled[i].SetActive(true);
-                    }
-                }
-            }*/
         }
     }
 

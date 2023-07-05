@@ -5,19 +5,16 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
 
-    void OnCollisionStay(Collision collision)
+    void OnCollisionStay(Collision collision)  //is a funktion set to destroy a object thet is either a Molcule, Atom or Item
     {
-        //Debug.Log("c");
         GameObject collider;
         collider = collision.gameObject;
         if (collider.tag == "Molecule")
         {
             Destroy(collider);
-            //Debug.Log("a");
         } else if (collider.tag == "Atom")
         {
             Destroy(collider);
-            //Debug.Log("p");
         }
         else if (collider.tag == "Item")
         {

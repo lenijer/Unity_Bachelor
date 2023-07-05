@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CombinationData : MonoBehaviour
 {
-    public AtomData Refrence;
-    public List<GameObject> Objects;
-    public GameObject Combinee;
-    public Progress prog;
+    public AtomData Refrence;           //is a refrence to all the atoms
+    public List<GameObject> Objects;    //is a list of premade objects which will hold information on possible combinations of atoms
+    public GameObject Combinee;         //just holds a refrence to the object thats going to be checked
+    public Progress prog;               //is to help show the user their progress
 
     // Start is called before the first frame update
     void Start()
@@ -15,21 +15,19 @@ public class CombinationData : MonoBehaviour
 
     }
 
+    //goes through all available atoms and checks which ones are posiisble. As of right now only a perfect mach is viable.
     public bool CheckIfPosible(Molecule molecule)
     {
         int thing = 0;
         for (int i = 0; i < Objects.Count; i++)
         {
-            //Debug.Log(Objects[i].GetComponent<Combination>().Name);
             if (Objects[i].GetComponent<Combination>().atom_number.Count == molecule.atoms.Count)
             {
                 thing = 0;
-                //Debug.Log(Objects[i].GetComponent<Combination>().atom_number + " & " + molecule.atoms);
                 for (int a = 0; a < molecule.atoms.Count; a++)
                 {
                     for (int b = 0; b < Objects[i].GetComponent<Combination>().atom_number.Count; b++)
                     {
-                        //Debug.Log(Objects[i].GetComponent<Combination>().atom_number[b] + " & " + molecule.atoms[a]);
                         if (molecule.atoms[a] == Objects[i].GetComponent<Combination>().atom_number[b] && a == b)
                         {
                             thing++;
@@ -49,6 +47,7 @@ public class CombinationData : MonoBehaviour
         return false;
     }
 
+    //sends back what atom it it based on it's integer/value
     public Atom MatchData(int atomnumber)
     {
         Atom returnee = new Atom();

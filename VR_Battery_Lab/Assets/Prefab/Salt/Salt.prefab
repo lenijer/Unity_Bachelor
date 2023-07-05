@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 5326986020209291064}
   - component: {fileID: 247542097230435656}
   - component: {fileID: 6510768320739586845}
+  - component: {fileID: -8663724822149813879}
   m_Layer: 8
   m_Name: Salt
   m_TagString: Item
@@ -292,7 +293,7 @@ MonoBehaviour:
   atom_number: 0b00000011000000
   Name: Salt
   Chemical_name: NaCl
-  Discovered: 0
+  Discovered: 1
 --- !u!33 &-2309228955508860096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -474,3 +475,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &-8663724822149813879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346501875715513467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -1,3 +1,7 @@
+/*
+ * Not Relevant to finished product 
+*/
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,7 +32,6 @@ public class TeleportPlayer : MonoBehaviour
     {
         int m_DropdownValue;
         m_DropdownValue = m_Dropdown.value;
-        //Debug.Log(m_DropdownValue);
         Player.transform.position = TeleportPads[m_DropdownValue].transform.position;
     }
 }
